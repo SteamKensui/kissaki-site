@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KISSAKI 切先 — Drop 01 am 30. Oktober 2026</title>
+<meta name="description" content="KISSAKI — japanisch-minimale Druckgrafik auf Kleidung, Papier und Alltagsgegenständen. Drop 01 am 30.10.2026 um 20:00 Uhr, 72 Stunden lang.">
+
+<!-- Pinterest-Domainverifizierung -->
+<meta name="p:domain_verify" content="d2f974373b2acfe42dd3239bcb77e000"/>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="KISSAKI 切先">
+<meta property="og:description" content="Drop 01 am 30. Oktober 2026, 20:00 Uhr. 72 Stunden.">
+<meta property="og:url" content="https://kissaki.studio/">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* Keine Webfonts eingebunden: deutsche Gerichte werten das Nachladen von
+   Google Fonts als DSGVO-Verstoss. Systemschriften -> kein Cookie-Banner noetig. */
+:root{
+  --ai:#1F3059; --shu:#C64E3A; --kinari:#EFE7D8; --sumi:#1A1A18;
+  --bg:#EDE5D6; --paper:#F6F2EA; --raised:#FBF8F2;
+  --ink:#1A1A18; --ink-soft:#5C554A; --ink-faint:#8A8175;
+  --line:rgba(26,26,24,.13); --line-strong:rgba(26,26,24,.28);
+  --accent:#1F3059; --seal:#C64E3A;
+  --serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Songti SC",Georgia,"Times New Roman",serif;
+  --sans:"Hiragino Sans","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --w:1080px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#161613; --paper:#1E1E1B; --raised:#252521;
+    --ink:#EFE7D8; --ink-soft:#A8A093; --ink-faint:#726B60;
+    --line:rgba(239,231,216,.14); --line-strong:rgba(239,231,216,.30);
+    --accent:#8FA6D6; --seal:#E0705A;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+     font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.25;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+img{max-width:100%}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 26px}
+.eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.22em;
+         text-transform:uppercase;color:var(--ink-faint)}
+
+/* Kopf */
+header{border-bottom:1px solid var(--line);background:var(--paper)}
+.head{max-width:var(--w);margin:0 auto;padding:16px 26px;display:flex;align-items:center;gap:12px}
+.seal{width:32px;height:32px;background:var(--seal);color:#F6F2EA;font-family:var(--serif);
+      font-weight:700;font-size:11px;line-height:1.05;display:grid;place-content:center;padding-top:1px}
+.wordmark{font-weight:600;letter-spacing:.30em;font-size:13px}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero svg{position:absolute;inset:0;width:100%;height:100%}
+.hero .inner{position:relative;max-width:var(--w);margin:0 auto;padding:104px 26px 80px}
+.jp{font-family:var(--serif);font-size:clamp(20px,3.2vw,30px);letter-spacing:.4em;color:var(--ink-soft)}
+.hero h1{font-size:clamp(40px,7.6vw,88px);font-weight:700;letter-spacing:-.015em;
+         line-height:1.04;margin:16px 0 0;max-width:13ch}
+.lede{margin-top:20px;max-width:46ch;font-size:17px;color:var(--ink-soft)}
+
+/* Countdown */
+.drop{background:var(--paper);border-bottom:1px solid var(--line)}
+.drop-in{max-width:var(--w);margin:0 auto;padding:26px;display:flex;
+         align-items:center;gap:32px;flex-wrap:wrap}
+.drop-txt{flex:1 1 260px}
+.drop-txt strong{font-family:var(--serif);font-size:19px;display:block}
+.clock{display:flex;gap:20px;font-variant-numeric:tabular-nums}
+.clock div{text-align:center}
+.clock b{display:block;font-family:var(--serif);font-size:34px;line-height:1}
+.clock span{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint)}
+
+section{padding:74px 0}
+.sec-h{margin-bottom:30px}
+.sec-h h2{font-size:clamp(25px,3.4vw,36px);margin-top:8px}
+.mark{font-family:var(--serif);font-size:15px;letter-spacing:.35em;color:var(--seal)}
+
+/* Waitlist */
+.wait{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.wait p.intro{color:var(--ink-soft);margin:14px auto 0;max-width:46ch}
+.slot{max-width:470px;margin:28px auto 0;padding:26px 22px;background:var(--raised);
+      border:1px dashed var(--line-strong)}
+.slot p{font-size:13.5px;color:var(--ink-soft)}
+.consent{font-size:11.5px;color:var(--ink-faint);margin:16px auto 0;max-width:46ch;line-height:1.6}
+
+/* Die Linie */
+.linie{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media (max-width:820px){.linie{grid-template-columns:1fr;gap:30px}}
+.linie p{color:var(--ink-soft);margin-top:14px;max-width:52ch}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.thumb{aspect-ratio:3/4;border:1px solid var(--line);background:var(--raised);overflow:hidden}
+.thumb svg{display:block;width:100%;height:100%}
+
+/* Motive */
+.motive{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+@media (max-width:820px){.motive{grid-template-columns:repeat(3,1fr)}}
+.m{aspect-ratio:1;background:var(--raised);border:1px solid var(--line);
+   display:grid;place-content:center;font-family:var(--serif);font-size:34px;
+   color:var(--ink);position:relative}
+.m i{position:absolute;bottom:7px;left:0;right:0;text-align:center;font-style:normal;
+     font-family:var(--sans);font-size:8.5px;letter-spacing:.16em;
+     text-transform:uppercase;color:var(--ink-faint)}
+
+/* Vertrauen */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+       border:1px solid var(--line)}
+@media (max-width:820px){.trust{grid-template-columns:repeat(2,1fr)}}
+.trust div{background:var(--paper);padding:22px 20px}
+.trust h3{font-size:15px;margin-bottom:5px}
+.trust p{font-size:13px;color:var(--ink-soft)}
+
+/* Recht */
+.legal{background:var(--paper);border-top:1px solid var(--line)}
+.legal h2{font-size:24px}
+.legal h3{font-size:15px;margin:26px 0 6px;font-family:var(--sans);font-weight:700;
+          letter-spacing:.04em}
+.legal p, .legal li{font-size:13.5px;color:var(--ink-soft);max-width:70ch}
+.legal ul{padding-left:19px;margin:6px 0}
+.legal .cols{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+@media (max-width:820px){.legal .cols{grid-template-columns:1fr;gap:0}}
+
+footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(--ink-faint)}
+.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head">
+    <span class="seal">切先</span>
+    <span class="wordmark">KISSAKI</span>
+  </div>
+</header>
+
+<div class="hero">
+  <svg viewBox="0 0 1400 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="sg" width="90" height="45" patternUnits="userSpaceOnUse">
+        <g fill="none" stroke="#1F3059" stroke-width="1.6" opacity=".26">
+          <circle cx="45" cy="45" r="43"/><circle cx="45" cy="45" r="33"/>
+          <circle cx="45" cy="45" r="23"/><circle cx="45" cy="45" r="13"/>
+          <circle cx="0" cy="45" r="43"/><circle cx="0" cy="45" r="33"/>
+          <circle cx="0" cy="45" r="23"/><circle cx="0" cy="45" r="13"/>
+          <circle cx="90" cy="45" r="43"/><circle cx="90" cy="45" r="33"/>
+          <circle cx="90" cy="45" r="23"/><circle cx="90" cy="45" r="13"/>
+        </g>
+      </pattern>
+    </defs>
+    <rect y="280" width="1400" height="360" fill="url(#sg)"/>
+    <circle cx="1150" cy="150" r="66" fill="#C64E3A" opacity=".78"/>
+  </svg>
+  <div class="inner">
+    <div class="jp">切先</div>
+    <h1>Die Spitze der Klinge.</h1>
+    <p class="lede">Alt-japanische Holzschnitte, auf vier Farben reduziert und auf schweren
+    Stoff gedruckt. Ein Drop, 72 Stunden, danach ist die Kollektion zu.</p>
+  </div>
+</div>
+
+<div class="drop">
+  <div class="drop-in">
+    <div class="drop-txt">
+      <span class="eyebrow">Drop 01 — 古 KO</span>
+      <strong>Freitag, 30. Oktober 2026, 20:00 Uhr</strong>
+      <span style="font-size:13.5px;color:var(--ink-soft)">Bestellfenster 72 Stunden, Ende 02.11. um 20:00 Uhr.</span>
+    </div>
+    <div class="clock">
+      <div><b id="d">–</b><span>Tage</span></div>
+      <div><b id="h">–</b><span>Std</span></div>
+      <div><b id="m">–</b><span>Min</span></div>
+      <div><b id="s">–</b><span>Sek</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="wait" id="warteliste">
+  <div class="wrap">
+    <span class="eyebrow">Warteliste</span>
+    <h2 style="margin-top:8px">Zwei Stunden Vorlauf</h2>
+    <p class="intro">Wer auf der Liste steht, bekommt den Link am 30. Oktober um 18:00 Uhr —
+    zwei Stunden vor allen anderen. Dazu den Coupon-Code für das Fenster.</p>
+    <div class="slot">
+      <!-- BREVO: dieses ganze <div class="slot"> durch den Einbettungscode ersetzen.
+           Formular MUSS auf Double-Opt-in stehen. -->
+      <p>Das Anmeldeformular wird gerade eingerichtet.<br>
+      Bis dahin: <a href="mailto:steam.kensui@gmail.com?subject=Warteliste%20KISSAKI">steam.kensui@gmail.com</a></p>
+    </div>
+    <p class="consent">Nach der Anmeldung kommt zuerst eine Bestätigungsmail (Double-Opt-in).
+    Abmeldung jederzeit über den Link in jeder Mail. Versand über Brevo,
+    Auftragsverarbeitung nach Art. 28 DSGVO.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="linie">
+      <div>
+        <span class="mark">線</span>
+        <h2 style="margin-top:8px">Die Linie</h2>
+        <p>Jedes Motiv hat einen Vorfahren. Hokusai starb 1849, Hiroshige 1858 —
+        ihre Holzschnitte sind gemeinfrei. Wir stellen den Himmel frei, reduzieren
+        auf vier Farben und lassen den Stoff die Rolle des Papiers übernehmen.</p>
+        <p>Wer wissen will, woher die Welle auf seinem Rücken kommt, findet den
+        Ursprung mit Titel, Jahr und Quelle im Bildnachweis.</p>
+      </div>
+      <div class="thumbs" id="thumbs"></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-h"><span class="eyebrow">Zeichen</span><h2>Fünfzehn Motive</h2></div>
+    <div class="motive" id="motive"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="trust">
+      <div><h3>Produktion in der EU</h3><p>Gedruckt in Deutschland, Lettland, den Niederlanden und Tschechien. Kein Versand aus Drittstaaten.</p></div>
+      <div><h3>14 Tage Widerruf</h3><p>Gesetzliches Widerrufsrecht. Individuell bedruckte Ware ist gekennzeichnet.</p></div>
+      <div><h3>Versand 3–7 Werktage</h3><p>Produktion 2–5 Werktage plus Versand, mit Sendungsverfolgung.</p></div>
+      <div><h3>Kein Tracking</h3><p>Diese Seite lädt keine externen Schriften, setzt keine Cookies und misst nichts.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="legal" id="rechtliches">
+  <div class="wrap">
+    <span class="eyebrow">Rechtliches</span>
+    <h2 style="margin-top:8px">Impressum, Datenschutz &amp; Bildnachweis</h2>
+    <div class="cols">
+      <div>
+        <h3>Impressum</h3>
+        <p>Angaben gemäß § 5 DDG</p>
+        <p>Malte Steinhilper<br>Zur Ebene 35<br>75015 Bretten<br>Deutschland</p>
+        <p>E-Mail: <a href="mailto:steam.kensui@gmail.com">steam.kensui@gmail.com</a></p>
+        <p>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV: Malte Steinhilper, Anschrift wie oben.</p>
+
+        <h3>Verbraucherstreitbeilegung</h3>
+        <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren
+        vor einer Verbraucherschlichtungsstelle teilzunehmen (§ 36 VSBG).</p>
+
+        <h3>Haftung für Links</h3>
+        <p>Diese Seite enthält Links zu externen Websites Dritter, auf deren Inhalte
+        wir keinen Einfluss haben. Für diese Inhalte ist stets der jeweilige Anbieter
+        verantwortlich.</p>
+      </div>
+      <div>
+        <h3>Datenschutz</h3>
+        <p>Diese Seite wird auf GitHub Pages gehostet (GitHub B.V., Vijzelstraat 68-72,
+        1017 HL Amsterdam). Beim Abruf überträgt dein Browser technisch notwendige Daten
+        — IP-Adresse, Zeitpunkt, aufgerufene Datei, Browserkennung. Rechtsgrundlage ist
+        Art. 6 Abs. 1 lit. f DSGVO (sicherer Betrieb der Seite). Speicherdauer: 12 Monate.</p>
+        <p>Es werden keine Cookies gesetzt, keine externen Schriften geladen und keine
+        Analyse- oder Trackingdienste eingesetzt.</p>
+        <p>Trägst du dich in die Warteliste ein, verarbeiten wir deine E-Mail-Adresse auf
+        Grundlage deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) über Brevo
+        (Sendinblue GmbH, Köpenicker Str. 126, 10179 Berlin). Die Einwilligung ist
+        jederzeit widerrufbar; die Adresse wird dann gelöscht.</p>
+        <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung,
+        Datenübertragbarkeit und Widerspruch sowie ein Beschwerderecht bei einer
+        Aufsichtsbehörde. Zuständig ist der Landesbeauftragte für den Datenschutz und
+        die Informationsfreiheit Baden-Württemberg.</p>
+
+        <h3>Bildnachweis</h3>
+        <p>Die Motive greifen gemeinfreie japanische Farbholzschnitte auf, unter anderem
+        von Katsushika Hokusai (1760–1849) und Utagawa Hiroshige (1797–1858).
+        Vorlagen aus Wikimedia Commons, Public Domain. Die Bearbeitung
+        (Freistellung, Farbreduktion) stammt von KISSAKI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>KISSAKI · Malte Steinhilper · Zur Ebene 35 · 75015 Bretten</span>
+    <span>Alle Preise inkl. USt. zzgl. Versand.</span>
+  </div>
+</footer>
+
+<script>
+/* Countdown auf den Drop: 30.10.2026, 20:00 Uhr deutscher Zeit (UTC+1, Winterzeit) */
+var target = new Date("2026-10-30T20:00:00+01:00").getTime();
+function pad(n){ return String(n).padStart(2,"0"); }
+function tick(){
+  var diff = target - Date.now();
+  if (diff < 0) diff = 0;
+  var s = Math.floor(diff/1000);
+  document.getElementById("d").textContent = Math.floor(s/86400);
+  document.getElementById("h").textContent = pad(Math.floor(s%86400/3600));
+  document.getElementById("m").textContent = pad(Math.floor(s%3600/60));
+  document.getElementById("s").textContent = pad(s%60);
+}
+tick(); setInterval(tick, 1000);
+
+/* Fünfzehn Motive */
+var motive = [
+  ["静","Shizuka"],["忍","Nin"],["切先","Kissaki"],["青海波","Seigaiha"],["鳥居","Torii"],
+  ["夢","Yume"],["月","Tsuki"],["桜","Sakura"],["円相","Enso"],["富士","Fuji"],
+  ["道","Michi"],["無","Mu"],["一","Ichi"],["心","Kokoro"],["眼","Me"]
+];
+document.getElementById("motive").innerHTML = motive.map(function(m){
+  return '<div class="m">' + m[0] + '<i>' + m[1] + '</i></div>';
+}).join("");
+
+/* Seigaiha-Felder in drei Farbwelten als Platzhalter fuer die Vorlagen */
+function feld(a,b,c){
+  var s = '<svg viewBox="0 0 300 400" aria-hidden="true"><rect width="300" height="400" fill="#EFE7D8"/>';
+  var rows = [[300,a],[250,b],[200,c],[150,a],[100,b]];
+  for (var r=0; r<rows.length; r++){
+    for (var x=-40; x<340; x+=60){
+      s += '<g fill="none" stroke="'+rows[r][1]+'" stroke-width="3">'
+        + '<circle cx="'+x+'" cy="'+rows[r][0]+'" r="42"/>'
+        + '<circle cx="'+x+'" cy="'+rows[r][0]+'" r="30"/>'
+        + '<circle cx="'+x+'" cy="'+rows[r][0]+'" r="18"/>'
+        + '<circle cx="'+x+'" cy="'+rows[r][0]+'" r="7"/></g>';
+    }
+  }
+  return s + '</svg>';
+}
+document.getElementById("thumbs").innerHTML = [
+  feld("#1F3059","#3A4E7E","#8FA6D6"),
+  feld("#9E3D3D","#A8563A","#C9906E"),
+  feld("#40573F","#5E7A5C","#A8C0A5")
+].map(function(s){ return '<div class="thumb">'+s+'</div>'; }).join("");
+</script>
+</body>
+</html>
