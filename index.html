@@ -127,6 +127,30 @@ section{padding:74px 0}
 footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(--ink-faint)}
 .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </style>
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<style>
+/* Brevo-Formular an das Seitendesign angleichen */
+.sib-form{padding:0!important;background:transparent!important}
+#sib-container{
+  background:var(--raised)!important; border-color:var(--line-strong)!important;
+  padding:26px 24px!important; margin:0 auto;
+}
+#sib-container input{
+  background:var(--paper)!important; color:var(--ink)!important;
+  border:1px solid var(--line-strong)!important; border-radius:2px!important;
+  font-family:var(--sans)!important; font-size:16px!important; padding:13px 14px!important;
+}
+#sib-container input::placeholder{color:var(--ink-faint)!important}
+#sib-container .entry__label{color:var(--ink)!important; font-family:var(--sans)!important}
+#sib-container .sib-form-block__button{
+  background:var(--ink)!important; color:var(--bg)!important;
+  border-radius:2px!important; padding:14px 30px!important; cursor:pointer;
+  font-family:var(--sans)!important; letter-spacing:.09em;
+}
+#sib-container .sib-form-block__button:hover{background:var(--accent)!important}
+#sib-container a{color:var(--accent)!important}
+.sib-form-message-panel{max-width:540px; margin:0 auto 14px!important; font-family:var(--sans)!important}
+</style>
 </head>
 <body>
 
@@ -184,11 +208,39 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
     <h2 style="margin-top:8px">Twenty-four hours early</h2>
     <p class="intro">Everyone on the list gets in on Thursday 29 October at 20:00 CET —
     a full day before anyone else — plus 10% off during the window.</p>
-    <div class="slot">
-      <!-- BREVO: replace this entire <div class="slot"> with the embed code.
-           The form MUST be set to double opt-in. -->
-      <p>The sign-up form is being set up.<br>
-      Until then: <a href="mailto:steam.kensui@gmail.com?subject=KISSAKI%20waitlist">steam.kensui@gmail.com</a></p>
+    <div class="sib-form">
+      <div id="sib-form-container" class="sib-form-container">
+        <div id="error-message" class="sib-form-message-panel" style="font-size:15px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:2px;max-width:540px;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">Something went wrong and your sign-up wasn&#39;t saved. Please try again.</span>
+          </div>
+        </div>
+        <div id="success-message" class="sib-form-message-panel" style="font-size:15px;text-align:left;color:#085229;background-color:#e7faf0;border-color:#13ce66;border-radius:2px;max-width:540px;">
+          <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+            <span class="sib-form-message-panel__inner-text">Almost there &mdash; check your inbox and confirm your email to join the list.</span>
+          </div>
+        </div>
+        <div id="sib-container" class="sib-container--large sib-container--vertical" style="max-width:540px;text-align:left;border-width:1px;border-style:solid;direction:ltr">
+          <form id="sib-form" method="POST" action="https://4b5f3c41.sibforms.com/serve/MUIFAI2vOGC_8QycgJ5pXVzuE4n4Fxj1Fot_Rlda3YCRaO8QEtRPqJJSDbe-Yb4WNLe-ZKr6bzKK6o_Fbq06uZeAlZeQvQW_IOv8TiG35ANOQFcpzAHwLi7rMliwwsHueBeFjqha5lAZS0V7MacX7WqZ1J9d8DY0iGZcgbxTEBaRIXEURuxghZ5ilmzxRSWDc-OESJReIL-szNaOxQ==" data-type="subscription">
+            <div class="sib-input sib-form-block">
+              <div class="form__entry entry_block">
+                <div class="form__label-row">
+                  <label class="entry__label" style="font-weight:700;font-size:14px;text-align:left" for="EMAIL" data-required="*">Email address</label>
+                  <div class="entry__field">
+                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" value="" placeholder="you@example.com" data-required="true" required />
+                  </div>
+                </div>
+                <label class="entry__error entry__error--primary" style="font-size:15px;text-align:left;color:#661d1d;background-color:#ffeded;border-color:#ff4949;border-radius:2px;"></label>
+              </div>
+            </div>
+            <div class="sib-form-block" style="text-align:left;padding-top:18px">
+              <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:14px;font-weight:700;border-width:0" form="sib-form" type="submit">JOIN</button>
+            </div>
+            <input type="text" name="email_address_check" value="" class="input--hidden">
+            <input type="hidden" name="locale" value="en">
+          </form>
+        </div>
+      </div>
     </div>
     <p class="consent">You will get a confirmation email first — the list only counts you once
     you click it. Unsubscribe any time via the link in every email. Sent with Brevo,
@@ -226,7 +278,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
       <div><h3>Printed in the EU</h3><p>Produced in Germany, Latvia, the Netherlands and Czechia. Nothing ships from outside the EEA.</p></div>
       <div><h3>14-day right to cancel</h3><p>Statutory EU right of withdrawal. Custom-printed items are marked as such.</p></div>
       <div><h3>Ships in 3–7 working days</h3><p>Production takes 2–5 working days plus transit, with tracking.</p></div>
-      <div><h3>No tracking</h3><p>This page loads no external fonts, sets no cookies and measures nothing.</p></div>
+      <div><h3>No tracking</h3><p>No analytics, no ad pixels, no external fonts. Only the sign-up form is served by Brevo.</p></div>
     </div>
   </div>
 </section>
@@ -259,8 +311,12 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
         1017 HL Amsterdam). Beim Abruf überträgt dein Browser technisch notwendige Daten
         — IP-Adresse, Zeitpunkt, aufgerufene Datei, Browserkennung. Rechtsgrundlage ist
         Art. 6 Abs. 1 lit. f DSGVO (sicherer Betrieb der Seite). Speicherdauer: 12 Monate.</p>
-        <p>Es werden keine Cookies gesetzt, keine externen Schriften geladen und keine
-        Analyse- oder Trackingdienste eingesetzt.</p>
+        <p>Es werden keine externen Schriften geladen und keine Analyse- oder
+        Trackingdienste eingesetzt. Einzige Ausnahme ist das Anmeldeformular der
+        Warteliste: Es wird von Brevo bereitgestellt, weshalb beim Aufruf dieser Seite
+        Skript- und Stildateien von <em>sibforms.com</em> geladen werden. Dabei wird
+        deine IP-Adresse an Brevo übertragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f
+        DSGVO (Bereitstellung des angefragten Formulars).</p>
         <p>Trägst du dich in die Warteliste ein, verarbeiten wir deine E-Mail-Adresse auf
         Grundlage deiner Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) über Brevo
         (Sendinblue GmbH, Köpenicker Str. 126, 10179 Berlin). Die Einwilligung ist
@@ -333,5 +389,20 @@ document.getElementById("thumbs").innerHTML = [
   feld("#40573F","#5E7A5C","#A8C0A5")
 ].map(function(s){ return '<div class="thumb">'+s+'</div>'; }).join("");
 </script>
+<script>
+window.REQUIRED_CODE_ERROR_MESSAGE = "Please choose a country code.";
+window.LOCALE = "en";
+window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "That doesn't look like a valid email address. Please check and try again.";
+window.REQUIRED_ERROR_MESSAGE = "Please enter your email address.";
+window.GENERIC_INVALID_MESSAGE = "That doesn't look like a valid email address. Please check and try again.";
+window.INVALID_NUMBER = "That doesn't look like a valid email address. Please check and try again.";
+window.INVALID_DATE = "Please enter a valid date.";
+window.REQUIRED_MULTISELECT_MESSAGE = "Please select at least one option.";
+window.translation = { common: {
+  selectedList: "{quantity} list selected", selectedLists: "{quantity} lists selected",
+  selectedOption: "{quantity} selected", selectedOptions: "{quantity} selected" } };
+var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 </body>
 </html>
