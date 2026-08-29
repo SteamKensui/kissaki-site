@@ -133,6 +133,10 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
    Markup bleibt exakt wie Brevo es ausliefert - Ueberfluessiges wird nur
    ausgeblendet, damit deren Skript alles findet, was es erwartet. */
 .kissaki-hide{display:none!important}
+/* Lade-Symbol im Button ausblenden. Dieselbe Regel liefert Brevos Stylesheet mit;
+   sie steht hier zusaetzlich, damit der Spinner auch dann verborgen bleibt, wenn
+   eine Browsererweiterung sibforms.com blockiert. */
+.sib-hide-loader-icon{display:none}
 #sib-container form{padding:24px 22px}
 #sib-container form > div{padding:0!important}
 #sib-container form > div + div{padding-top:18px!important}
