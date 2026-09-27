@@ -4,169 +4,156 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KISSAKI 切先 — Drop 01, 4 December 2026</title>
-<meta name="description" content="KISSAKI — Japanese-minimal print work on clothing, paper and everyday objects. Drop 01 opens 4 December 2026 at 20:00 CET and runs for 72 hours.">
+<meta name="description" content="KISSAKI 切先 — Edo-period kimono stencils and a sword from 1622, printed on heavy cotton in the EU. Drop 01 opens Friday 4 December 2026, 20:00 CET.">
 
 <!-- Pinterest-Domainverifizierung -->
 <meta name="p:domain_verify" content="d2f974373b2acfe42dd3239bcb77e000"/>
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="KISSAKI 切先">
-<meta property="og:description" content="Drop 01 — 4 December 2026, 20:00 CET. 72 hours.">
+<meta property="og:title" content="KISSAKI 切先 — Drop 01">
+<meta property="og:description" content="Katagami & Katana. Friday 4 December 2026, 20:00 CET. Launch prices for 72 hours.">
 <meta property="og:url" content="https://kissaki.studio/">
+<meta property="og:image" content="https://kissaki.studio/art/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#121214">
 
 <style>
-/* Keine Webfonts eingebunden: deutsche Gerichte werten das Nachladen von
-   Google Fonts als DSGVO-Verstoss. Systemschriften -> kein Cookie-Banner noetig. */
+/* Keine Webfonts eingebunden: Nachladen von Google Fonts gilt als DSGVO-Risiko.
+   Systemschriften -> kein Cookie-Banner noetig. */
 :root{
-  --ai:#1F3059; --shu:#C64E3A; --kinari:#EFE7D8; --sumi:#1A1A18;
-  --bg:#EDE5D6; --paper:#F6F2EA; --raised:#FBF8F2;
-  --ink:#1A1A18; --ink-soft:#5C554A; --ink-faint:#8A8175;
-  --line:rgba(26,26,24,.13); --line-strong:rgba(26,26,24,.28);
-  --accent:#1F3059; --seal:#C64E3A;
-  --serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Songti SC",Georgia,"Times New Roman",serif;
-  --sans:"Hiragino Sans","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
-  --w:1080px;
-}
-@media (prefers-color-scheme:dark){
-  :root{
-    --bg:#161613; --paper:#1E1E1B; --raised:#252521;
-    --ink:#EFE7D8; --ink-soft:#A8A093; --ink-faint:#726B60;
-    --line:rgba(239,231,216,.14); --line-strong:rgba(239,231,216,.30);
-    --accent:#8FA6D6; --seal:#E0705A;
-  }
+  --bg:#121214; --paper:#18181B; --raised:#1F1F23;
+  --ink:#F0ECE4; --ink-soft:#B3ADA3; --ink-faint:#7D776E;
+  --line:rgba(240,236,228,.12); --line-strong:rgba(240,236,228,.28);
+  --shu:#C8262B; --mint:#8FD9C4;
+  --serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Songti SC","Noto Serif CJK JP",Georgia,serif;
+  --sans:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --w:1120px;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
      font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:var(--serif);margin:0;line-height:1.25;text-wrap:balance}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance}
 p{margin:0}
 a{color:inherit}
-img{max-width:100%}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{max-width:var(--w);margin:0 auto;padding:0 26px}
-.eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.22em;
-         text-transform:uppercase;color:var(--ink-faint)}
+img{max-width:100%;height:auto;display:block}
+:focus-visible{outline:2px solid var(--shu);outline-offset:3px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-faint)}
+.red{color:var(--shu)}
 
 /* Kopf */
-header{border-bottom:1px solid var(--line);background:var(--paper)}
-.head{max-width:var(--w);margin:0 auto;padding:16px 26px;display:flex;align-items:center;gap:12px}
-.seal{width:32px;height:32px;background:var(--seal);color:#F6F2EA;font-family:var(--serif);
+header{border-bottom:1px solid var(--line)}
+.head{max-width:var(--w);margin:0 auto;padding:16px 24px;display:flex;align-items:center;gap:12px}
+.seal{width:32px;height:32px;background:var(--shu);color:#F6F2EA;font-family:var(--serif);
       font-weight:700;font-size:11px;line-height:1.05;display:grid;place-content:center;padding-top:1px}
-.wordmark{font-weight:600;letter-spacing:.30em;font-size:13px}
+.wordmark{font-weight:700;letter-spacing:.32em;font-size:13px}
+.head nav{margin-left:auto;display:flex;gap:22px;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+.head nav a{text-decoration:none;color:var(--ink-soft)}
+.head nav a:hover{color:var(--ink)}
+@media (max-width:560px){.head nav{display:none}}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-.hero svg{position:absolute;inset:0;width:100%;height:100%}
-.hero .inner{position:relative;max-width:var(--w);margin:0 auto;padding:104px 26px 80px}
-.jp{font-family:var(--serif);font-size:clamp(20px,3.2vw,30px);letter-spacing:.4em;color:var(--ink-soft)}
-.hero h1{font-size:clamp(40px,7.6vw,88px);font-weight:700;letter-spacing:-.015em;
-         line-height:1.04;margin:16px 0 0;max-width:13ch}
-.lede{margin-top:20px;max-width:46ch;font-size:17px;color:var(--ink-soft)}
+.hero{border-bottom:1px solid var(--line)}
+.hero .inner{max-width:var(--w);margin:0 auto;padding:72px 24px 64px;display:grid;
+             grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+@media (max-width:860px){.hero .inner{grid-template-columns:1fr;padding-top:44px}}
+.jp{font-family:var(--serif);font-size:clamp(26px,3.4vw,36px);letter-spacing:.3em;color:var(--shu);font-weight:700}
+.hero h1{font-size:clamp(42px,6.6vw,80px);font-weight:700;letter-spacing:-.02em;margin:14px 0 0}
+.lede{margin-top:22px;max-width:44ch;font-size:17px;color:var(--ink-soft)}
+.cta{display:inline-block;margin-top:30px;padding:15px 28px;background:var(--shu);color:#fff;
+     text-decoration:none;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase}
+.cta:hover{background:#A91F23}
+.hero-art{justify-self:end;width:100%;max-width:470px}
 
-/* Countdown */
+/* Drop-Leiste */
 .drop{background:var(--paper);border-bottom:1px solid var(--line)}
-.drop-in{max-width:var(--w);margin:0 auto;padding:26px;display:flex;
-         align-items:center;gap:32px;flex-wrap:wrap}
-.drop-txt{flex:1 1 260px}
-.drop-txt strong{font-family:var(--serif);font-size:19px;display:block}
-.clock{display:flex;gap:20px;font-variant-numeric:tabular-nums}
+.drop-in{max-width:var(--w);margin:0 auto;padding:26px 24px;display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.drop-txt{flex:1 1 300px}
+.drop-txt strong{font-size:20px;display:block;margin:4px 0 2px}
+.drop-txt span.sub{font-size:14px;color:var(--ink-soft)}
+.clock{display:flex;gap:22px;font-variant-numeric:tabular-nums}
 .clock div{text-align:center}
-.clock b{display:block;font-family:var(--serif);font-size:34px;line-height:1}
+.clock b{display:block;font-size:34px;line-height:1;font-weight:700}
 .clock span{font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint)}
 
-section{padding:74px 0}
-.sec-h{margin-bottom:30px}
-.sec-h h2{font-size:clamp(25px,3.4vw,36px);margin-top:8px}
-.mark{font-family:var(--serif);font-size:15px;letter-spacing:.35em;color:var(--seal)}
+section{padding:76px 0}
+.sec-h{margin-bottom:34px;max-width:60ch}
+.sec-h h2{font-size:clamp(28px,3.6vw,40px);margin-top:10px}
+.sec-h p{margin-top:14px;color:var(--ink-soft)}
 
-/* Waitlist */
+/* Warteliste */
 .wait{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
-.wait p.intro{color:var(--ink-soft);margin:14px auto 0;max-width:46ch}
-.slot{max-width:470px;margin:28px auto 0;padding:26px 22px;background:var(--raised);
-      border:1px dashed var(--line-strong)}
-.slot p{font-size:13.5px;color:var(--ink-soft)}
-.consent{font-size:11.5px;color:var(--ink-faint);margin:16px auto 0;max-width:46ch;line-height:1.6}
+.wait .sec-h{margin:0 auto}
+.perks{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+.perks span{border:1px solid var(--line-strong);padding:8px 14px;font-size:13px;letter-spacing:.04em}
+.consent{font-size:11.5px;color:var(--ink-faint);margin:18px auto 0;max-width:50ch;line-height:1.6}
 
-/* Die Linie */
-.linie{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-@media (max-width:820px){.linie{grid-template-columns:1fr;gap:30px}}
-.linie p{color:var(--ink-soft);margin-top:14px;max-width:52ch}
-.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.thumb{aspect-ratio:3/4;border:1px solid var(--line);background:var(--raised);overflow:hidden}
-.thumb svg{display:block;width:100%;height:100%}
+/* Kollektion */
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g7{grid-template-columns:repeat(4,1fr)}
+@media (max-width:860px){.g4,.g7{grid-template-columns:repeat(2,1fr)}}
+.piece{background:var(--raised);border:1px solid var(--line);display:flex;flex-direction:column}
+.piece img{width:100%;height:auto;aspect-ratio:4/5;object-fit:contain;background:#121214}
+.piece .cap{padding:14px 14px 16px;border-top:1px solid var(--line)}
+.piece .no{font-size:10px;letter-spacing:.22em;color:var(--ink-faint)}
+.piece h3{font-size:15px;letter-spacing:.14em;margin-top:4px}
+.piece h3 em{font-style:normal;font-family:var(--serif);letter-spacing:.05em;color:var(--shu);margin-left:6px}
+.piece p{font-size:13px;color:var(--ink-soft);margin-top:4px}
+.line-h{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin:0 0 16px}
+.line-h h3{font-size:22px}
+.line-h span{font-size:13px;color:var(--ink-soft)}
+.spacer{height:56px}
 
-/* Motive */
-.motive{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-@media (max-width:820px){.motive{grid-template-columns:repeat(3,1fr)}}
-.m{aspect-ratio:1;background:var(--raised);border:1px solid var(--line);
-   display:grid;place-content:center;font-family:var(--serif);font-size:34px;
-   color:var(--ink);position:relative}
-.m i{position:absolute;bottom:7px;left:0;right:0;text-align:center;font-style:normal;
-     font-family:var(--sans);font-size:8.5px;letter-spacing:.16em;
-     text-transform:uppercase;color:var(--ink-faint)}
+/* Bleibt */
+.stays{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media (max-width:860px){.stays{grid-template-columns:1fr;gap:20px}}
+.stays p{color:var(--ink-soft);margin-top:14px;max-width:52ch}
+table.when{width:100%;border-collapse:collapse;font-size:14px}
+table.when th,table.when td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line)}
+table.when th{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);font-weight:700}
 
 /* Vertrauen */
-.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
-       border:1px solid var(--line)}
-@media (max-width:820px){.trust{grid-template-columns:repeat(2,1fr)}}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+@media (max-width:860px){.trust{grid-template-columns:repeat(2,1fr)}}
 .trust div{background:var(--paper);padding:22px 20px}
-.trust h3{font-size:15px;margin-bottom:5px}
+.trust h3{font-size:15px;margin-bottom:6px}
 .trust p{font-size:13px;color:var(--ink-soft)}
 
 /* Recht */
 .legal{background:var(--paper);border-top:1px solid var(--line)}
 .legal h2{font-size:24px}
-.legal h3{font-size:15px;margin:26px 0 6px;font-family:var(--sans);font-weight:700;
-          letter-spacing:.04em}
-.legal p, .legal li{font-size:13.5px;color:var(--ink-soft);max-width:70ch}
-.legal ul{padding-left:19px;margin:6px 0}
-.legal .cols{display:grid;grid-template-columns:1fr 1fr;gap:44px}
-@media (max-width:820px){.legal .cols{grid-template-columns:1fr;gap:0}}
-.legal details{border-top:1px solid var(--line);padding:0}
+.legal h3{font-size:14px;margin:24px 0 6px;font-weight:700;letter-spacing:.04em}
+.legal p,.legal li{font-size:13.5px;color:var(--ink-soft);max-width:72ch;margin-top:6px}
+.legal details{border-top:1px solid var(--line)}
 .legal details:last-of-type{border-bottom:1px solid var(--line)}
-.legal summary{list-style:none;cursor:pointer;padding:15px 2px;font-family:var(--sans);
-  font-weight:700;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:12px}
+.legal summary{list-style:none;cursor:pointer;padding:15px 2px;font-weight:700;font-size:13px;
+  letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;gap:12px}
 .legal summary::-webkit-details-marker{display:none}
 .legal summary::after{content:"+";font-weight:400;font-size:17px;color:var(--ink-faint);line-height:1}
 .legal details[open] summary::after{content:"\2013"}
 .legal details > div{padding:0 0 20px}
-.legal details h3:first-child{margin-top:0}
-.legal .stack{max-width:70ch}
-
+.legal .stack{max-width:72ch}
 footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(--ink-faint)}
 .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-</style>
-<style>
-/* Warteliste */
-.wl{max-width:440px;margin:26px auto 0;text-align:left}
-.wl label{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;margin-bottom:7px;color:var(--ink)}
+
+/* Formular */
+.wl{max-width:460px;margin:28px auto 0;text-align:left}
+.wl label{display:block;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
 .wl-row{display:flex;gap:10px;flex-wrap:wrap}
-.wl input[type=email]{
-  flex:1 1 240px;font-family:var(--sans);font-size:16px;color:var(--ink);
-  background:var(--paper);border:1px solid var(--line-strong);border-radius:2px;padding:14px 15px;
-}
+.wl input[type=email]{flex:1 1 240px;font-family:var(--sans);font-size:16px;color:var(--ink);
+  background:var(--bg);border:1px solid var(--line-strong);border-radius:0;padding:14px 15px}
 .wl input[type=email]::placeholder{color:var(--ink-faint)}
-.wl input[type=email]:focus{outline:2px solid var(--accent);outline-offset:2px}
-.wl button{
-  font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.12em;
-  padding:14px 30px;border:0;border-radius:2px;cursor:pointer;
-  background:var(--ink);color:var(--bg);transition:background .18s;
-}
-.wl button:hover{background:var(--accent);color:#EFE7D8}
+.wl input[type=email]:focus{outline:2px solid var(--shu);outline-offset:2px}
+.wl button{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:.16em;padding:14px 30px;
+  border:0;border-radius:0;cursor:pointer;background:var(--shu);color:#fff;transition:background .18s}
+.wl button:hover{background:#A91F23}
 .wl button[disabled]{opacity:.55;cursor:default}
 .wl-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
-.wl-msg{
-  margin-top:16px;padding:13px 16px;border:1px solid;border-radius:2px;
-  font-size:14.5px;line-height:1.5;display:none;
-}
-.wl-msg.ok{display:block;border-color:#2f6b48;background:#e7faf0;color:#085229}
-.wl-msg.err{display:block;border-color:#a33;background:#ffeded;color:#661d1d}
-@media (prefers-color-scheme:dark){
-  .wl-msg.ok{background:#1c3327;color:#bfe6cf;border-color:#2f6b48}
-  .wl-msg.err{background:#3a1f1f;color:#f3c9c9;border-color:#8a3a3a}
-}
+.wl-msg{margin-top:16px;padding:13px 16px;border:1px solid;font-size:14.5px;line-height:1.5;display:none}
+.wl-msg.ok{display:block;border-color:#2f6b48;background:#1c3327;color:#bfe6cf}
+.wl-msg.err{display:block;border-color:#8a3a3a;background:#3a1f1f;color:#f3c9c9}
 </style>
 </head>
 <body>
@@ -175,42 +162,31 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
   <div class="head">
     <span class="seal">切先</span>
     <span class="wordmark">KISSAKI</span>
+    <nav><a href="#collection">Drop 01</a><a href="#waitlist">Waitlist</a><a href="#legal">Legal</a></nav>
   </div>
 </header>
 
 <div class="hero">
-  <svg viewBox="0 0 1400 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <defs>
-      <pattern id="sg" width="90" height="45" patternUnits="userSpaceOnUse">
-        <g fill="none" stroke="#1F3059" stroke-width="1.6" opacity=".26">
-          <circle cx="45" cy="45" r="43"/><circle cx="45" cy="45" r="33"/>
-          <circle cx="45" cy="45" r="23"/><circle cx="45" cy="45" r="13"/>
-          <circle cx="0" cy="45" r="43"/><circle cx="0" cy="45" r="33"/>
-          <circle cx="0" cy="45" r="23"/><circle cx="0" cy="45" r="13"/>
-          <circle cx="90" cy="45" r="43"/><circle cx="90" cy="45" r="33"/>
-          <circle cx="90" cy="45" r="23"/><circle cx="90" cy="45" r="13"/>
-        </g>
-      </pattern>
-    </defs>
-    <rect y="280" width="1400" height="360" fill="url(#sg)"/>
-    <circle cx="1150" cy="150" r="66" fill="#C64E3A" opacity=".78"/>
-  </svg>
   <div class="inner">
-    <div class="jp">切先</div>
-    <h1>The point of the blade.</h1>
-    <p class="lede">Old Japanese woodblock prints, cut down to four colours and pressed onto
-    heavy cloth. One drop, 72 hours, then the collection closes.</p>
+    <div>
+      <div class="jp">切先</div>
+      <h1>The point of the blade.</h1>
+      <p class="lede">Kimono stencils cut by hand in Edo-period Japan. A sword forged in 1622.
+      Printed large on heavy cotton, made to order in Germany.</p>
+      <a class="cta" href="#waitlist">Get in 24 hours early</a>
+    </div>
+    <img class="hero-art" src="art/drop01/000.jpg" alt="TSURU TO NAMI 鶴と波 — cranes over the waves, a red sun behind them" width="720" height="900">
   </div>
 </div>
 
 <div class="drop">
   <div class="drop-in">
     <div class="drop-txt">
-      <span class="eyebrow">Drop 01 — 古 KO</span>
+      <span class="eyebrow">Drop 01 — Katagami &amp; Katana</span>
       <strong>Friday 4 December 2026, 20:00 CET</strong>
-      <span style="font-size:13.5px;color:var(--ink-soft)">Ordering window 72 hours, closes 7 December at 20:00 CET.</span>
+      <span class="sub">Launch prices for 72 hours, until Monday 7 December, 20:00 CET.</span>
     </div>
-    <div class="clock">
+    <div class="clock" aria-label="Countdown to Drop 01">
       <div><b id="d">–</b><span>Days</span></div>
       <div><b id="h">–</b><span>Hrs</span></div>
       <div><b id="m">–</b><span>Min</span></div>
@@ -219,12 +195,15 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
   </div>
 </div>
 
-<section class="wait" id="warteliste">
+<section class="wait" id="waitlist">
   <div class="wrap">
-    <span class="eyebrow">Waitlist</span>
-    <h2 style="margin-top:8px">Twenty-four hours early</h2>
-    <p class="intro">Everyone on the list gets in on Thursday 3 December at 20:00 CET —
-    a full day before anyone else — plus 10% off during the window.</p>
+    <div class="sec-h">
+      <span class="eyebrow">Waitlist</span>
+      <h2>A day before everyone else.</h2>
+      <p>The list gets in on Thursday 3 December at 20:00 CET. Everyone else on Friday.
+      For all 72 hours, every piece is 10% off. No code, the prices are already reduced.</p>
+    </div>
+    <div class="perks"><span>24 hours early</span><span>10% launch price</span><span>Three short emails, nothing else</span></div>
     <form class="wl" id="wl-form" novalidate>
       <label for="wl-mail">Email address</label>
       <div class="wl-row">
@@ -234,61 +213,91 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
       <input class="wl-hp" type="text" name="email_address_check" tabindex="-1" autocomplete="off" aria-hidden="true">
       <p class="wl-msg" id="wl-msg" role="status" aria-live="polite"></p>
     </form>
-    <p class="consent">You will get a confirmation email first — the list only counts you once
-    you click it. Unsubscribe any time via the link in every email. Sent with Brevo,
-    data processing agreement under Art. 28 GDPR.</p>
+    <p class="consent">You get a confirmation email first. You're only on the list once you click it.
+    Unsubscribe any time via the link in every email. Sent with Brevo, data processing agreement under Art. 28 GDPR.</p>
   </div>
 </section>
 
-<section>
+<section id="collection">
   <div class="wrap">
-    <div class="linie">
-      <div>
-        <span class="mark">線</span>
-        <h2 style="margin-top:8px">The Line</h2>
-        <p>Every motif has an ancestor. Hokusai died in 1849, Hiroshige in 1858 — their
-        woodblock prints are in the public domain. We cut out the sky, reduce to four
-        colours and let the cloth take the part the paper used to play.</p>
-        <p>If you want to know where the wave on your back comes from, the credits name
-        the title, the year and the source.</p>
-      </div>
-      <div class="thumbs" id="thumbs"></div>
+    <div class="sec-h">
+      <span class="eyebrow">Drop 01 · Eleven pieces</span>
+      <h2>Two lines. Both real.</h2>
+      <p>No random characters, no invented history. Every motif comes from an object you can
+      look up in the Metropolitan Museum of Art, and every word is a real term from the Japanese
+      martial arts, with its meaning.</p>
+    </div>
+
+    <div class="line-h"><h3>Katagami <span class="red" style="font-family:var(--serif)">型紙</span></h3><span>Four hoodies · black · €59.90</span></div>
+    <p style="color:var(--ink-soft);max-width:62ch;margin:-4px 0 20px">Katagami are paper stencils that dyers in Edo-period Japan cut by hand to print kimono cloth. Made for fabric, so they sit on fabric: large on the back, one small grey character on the chest.</p>
+    <div class="grid g4">
+      <div class="piece"><img src="art/drop01/000.jpg" alt="TSURU TO NAMI" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 000</div><h3>TSURU TO NAMI<em>鶴と波</em></h3><p>A 200-year-old kimono stencil. Now on your back.</p></div></div>
+      <div class="piece"><img src="art/drop01/001.jpg" alt="TSURU" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 001</div><h3>TSURU<em>鶴は千年</em></h3><p>Seven cranes. One blade. Two centuries.</p></div></div>
+      <div class="piece"><img src="art/drop01/003.jpg" alt="UME" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 003</div><h3>UME<em>梅一輪</em></h3><p>The first bloom in the cold.</p></div></div>
+      <div class="piece"><img src="art/drop01/004.jpg" alt="NAMI" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 004</div><h3>NAMI<em>波</em></h3><p>The sea does not ask permission.</p></div></div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="line-h"><h3>Katana <span class="red" style="font-family:var(--serif)">刀</span></h3><span>Seven tees · black · from €17.49</span></div>
+    <p style="color:var(--ink-soft);max-width:62ch;margin:-4px 0 20px">A real sword, dated 1622, driven through two characters. The blade enters the upper one and leaves below the lower one.</p>
+    <div class="grid g7">
+      <div class="piece"><img src="art/drop01/T01.jpg" alt="KISSAKI red" loading="lazy" width="720" height="900"><div class="cap"><h3>KISSAKI<em>切先</em></h3><p>The point of the blade. Red.</p></div></div>
+      <div class="piece"><img src="art/drop01/T02.jpg" alt="KISSAKI white" loading="lazy" width="720" height="900"><div class="cap"><h3>KISSAKI<em>切先</em></h3><p>The point of the blade. White.</p></div></div>
+      <div class="piece"><img src="art/drop01/T03.jpg" alt="ISSEN" loading="lazy" width="720" height="900"><div class="cap"><h3>ISSEN<em>一閃</em></h3><p>A single flash. One cut, no second chance.</p></div></div>
+      <div class="piece"><img src="art/drop01/T04.jpg" alt="KAKUGO" loading="lazy" width="720" height="900"><div class="cap"><h3>KAKUGO<em>覚悟</em></h3><p>Resolve. Decide before you draw.</p></div></div>
+      <div class="piece"><img src="art/drop01/T05.jpg" alt="MUSHIN" loading="lazy" width="720" height="900"><div class="cap"><h3>MUSHIN<em>無心</em></h3><p>Empty mind. Full speed.</p></div></div>
+      <div class="piece"><img src="art/drop01/T06.jpg" alt="ZANSHIN" loading="lazy" width="720" height="900"><div class="cap"><h3>ZANSHIN<em>残心</em></h3><p>The mind that remains after the strike.</p></div></div>
+      <div class="piece"><img src="art/drop01/T07.jpg" alt="BUSHI" loading="lazy" width="720" height="900"><div class="cap"><h3>BUSHI<em>武士</em></h3><p>Warrior. Carry the blade.</p></div></div>
     </div>
   </div>
 </section>
 
 <section style="padding-top:0">
   <div class="wrap">
-    <div class="sec-h"><span class="eyebrow">Marks</span><h2>Fifteen motifs</h2></div>
-    <div class="motive" id="motive"></div>
+    <div class="stays">
+      <div>
+        <span class="eyebrow">After the drop</span>
+        <h2 style="font-size:clamp(26px,3.2vw,34px);margin-top:10px">The pieces stay. The launch price doesn't.</h2>
+        <p>Nothing is made before someone orders it, so nothing has to disappear. Every piece of
+        Drop 01 stays in the shop after Monday. What ends is the launch price.</p>
+      </div>
+      <table class="when">
+        <tr><th></th><th>Launch window</th><th>After 7 Dec</th></tr>
+        <tr><td>Waitlist</td><td>Thu 3 Dec, 20:00 · −10%</td><td>regular price</td></tr>
+        <tr><td>Everyone</td><td>Fri 4 Dec, 20:00 · −10%</td><td>regular price</td></tr>
+        <tr><td>Pieces</td><td>all eleven</td><td>all eleven</td></tr>
+      </table>
+    </div>
   </div>
 </section>
 
 <section style="padding-top:0">
   <div class="wrap">
     <div class="trust">
-      <div><h3>Printed in the EU</h3><p>Produced in Germany, Latvia, the Netherlands and Czechia. Nothing ships from outside the EEA.</p></div>
-      <div><h3>14-day right to cancel</h3><p>Statutory EU right of withdrawal. Custom-printed items are marked as such.</p></div>
-      <div><h3>Ships in 3–7 working days</h3><p>Production takes 2–5 working days plus transit, with tracking.</p></div>
-      <div><h3>No tracking</h3><p>Nothing is loaded from outside this page — no analytics, no ad pixels, no external fonts or scripts.</p></div>
+      <div><h3>Printed in Germany</h3><p>Every piece is printed to order by Textildruck Europa and ships from inside the EU.</p></div>
+      <div><h3>14-day right of withdrawal</h3><p>The statutory EU right of withdrawal applies to every order.</p></div>
+      <div><h3>Made to order</h3><p>Production takes up to 10 working days, then shipping with tracking.</p></div>
+      <div><h3>No tracking</h3><p>This page loads nothing from outside: no analytics, no ad pixels, no external fonts or scripts.</p></div>
     </div>
   </div>
 </section>
 
-<section class="legal" id="rechtliches">
+<section class="legal" id="legal">
   <div class="wrap">
     <span class="eyebrow">Legal · Rechtliches</span>
-    <h2 style="margin-top:8px">Impressum, Datenschutz &amp; Bildnachweis</h2>
-    <p style="margin-top:10px;margin-bottom:22px;font-size:13px;color:var(--ink-faint);max-width:70ch">Required legal notices under German law. Kept in German because that is where KISSAKI is operated from. Click a heading to open it.</p>
+    <h2 style="margin-top:8px">Legal notice, privacy &amp; image credits</h2>
+    <p style="margin-bottom:22px;font-size:13px;color:var(--ink-faint)">Required under German law, so the binding version is in German. Click a heading to open it.</p>
     <div class="stack">
 
       <details id="impressum">
-        <summary>Impressum</summary>
+        <summary>Impressum · Legal notice</summary>
         <div>
           <p>Angaben gem&auml;&szlig; &sect; 5 DDG</p>
           <p>Malte Steinhilper<br>Zur Ebene 35<br>75015 Bretten<br>Deutschland</p>
           <p>E-Mail: <a href="mailto:steam.kensui@gmail.com">steam.kensui@gmail.com</a></p>
           <p>Verantwortlich f&uuml;r den Inhalt nach &sect; 18 Abs. 2 MStV: Malte Steinhilper, Anschrift wie oben.</p>
+          <p>Kleinunternehmer gem&auml;&szlig; &sect; 19 UStG &ndash; es wird keine Umsatzsteuer berechnet.</p>
           <h3>Verbraucherstreitbeilegung</h3>
           <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren
           vor einer Verbraucherschlichtungsstelle teilzunehmen (&sect; 36 VSBG).</p>
@@ -300,7 +309,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
       </details>
 
       <details id="datenschutz">
-        <summary>Datenschutzerkl&auml;rung</summary>
+        <summary>Datenschutzerkl&auml;rung · Privacy</summary>
         <div>
           <p>Diese Seite wird auf GitHub Pages gehostet (GitHub B.V., Vijzelstraat 68-72,
           1017 HL Amsterdam). Beim Abruf &uuml;bertr&auml;gt dein Browser technisch notwendige Daten
@@ -324,12 +333,15 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
       </details>
 
       <details id="bildnachweis">
-        <summary>Bildnachweis</summary>
+        <summary>Bildnachweis · Image credits</summary>
         <div>
-          <p>Die Motive greifen gemeinfreie japanische Farbholzschnitte auf, unter anderem
-          von Katsushika Hokusai (1760&ndash;1849) und Utagawa Hiroshige (1797&ndash;1858).
-          Vorlagen aus Wikimedia Commons, Public Domain. Die Bearbeitung
-          (Freistellung, Farbreduktion) stammt von KISSAKI.</p>
+          <p>Katagami-Linie: Motive nach Katagami (Edo-Zeit, 19. Jh.), The Metropolitan Museum of Art,
+          Open Access / Public Domain (CC0). Katana-Linie: Klinge und Montierung nach Schwertern im
+          Metropolitan Museum of Art, datiert 1622, Open Access / Public Domain (CC0).</p>
+          <p>Weitere Motive im Shop greifen gemeinfreie Farbholzschnitte auf, u. a. von
+          Katsushika Hokusai (1760&ndash;1849) und Utagawa Hiroshige (1797&ndash;1858), Vorlagen aus
+          Wikimedia Commons, Public Domain.</p>
+          <p>Bearbeitung (Freistellung, Farbreduktion, Komposition, Typografie): KISSAKI.</p>
         </div>
       </details>
 
@@ -340,7 +352,7 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 <footer>
   <div class="wrap foot">
     <span>KISSAKI 切先 · <a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a></span>
-    <span>All prices include VAT, excluding shipping.</span>
+    <span>No VAT is charged (small business, § 19 UStG). Prices plus shipping.</span>
   </div>
 </footer>
 
@@ -358,42 +370,9 @@ function tick(){
   document.getElementById("s").textContent = pad(s%60);
 }
 tick(); setInterval(tick, 1000);
-
-/* Fünfzehn Motive */
-var motive = [
-  ["静","Shizuka"],["忍","Nin"],["切先","Kissaki"],["青海波","Seigaiha"],["鳥居","Torii"],
-  ["夢","Yume"],["月","Tsuki"],["桜","Sakura"],["円相","Enso"],["富士","Fuji"],
-  ["道","Michi"],["無","Mu"],["一","Ichi"],["心","Kokoro"],["眼","Me"]
-];
-document.getElementById("motive").innerHTML = motive.map(function(m){
-  return '<div class="m">' + m[0] + '<i>' + m[1] + '</i></div>';
-}).join("");
-
-/* Seigaiha-Felder in drei Farbwelten als Platzhalter fuer die Vorlagen */
-function feld(a,b,c){
-  var s = '<svg viewBox="0 0 300 400" aria-hidden="true"><rect width="300" height="400" fill="#EFE7D8"/>';
-  var rows = [[300,a],[250,b],[200,c],[150,a],[100,b]];
-  for (var r=0; r<rows.length; r++){
-    for (var x=-40; x<340; x+=60){
-      s += '<g fill="none" stroke="'+rows[r][1]+'" stroke-width="3">'
-        + '<circle cx="'+x+'" cy="'+rows[r][0]+'" r="42"/>'
-        + '<circle cx="'+x+'" cy="'+rows[r][0]+'" r="30"/>'
-        + '<circle cx="'+x+'" cy="'+rows[r][0]+'" r="18"/>'
-        + '<circle cx="'+x+'" cy="'+rows[r][0]+'" r="7"/></g>';
-    }
-  }
-  return s + '</svg>';
-}
-document.getElementById("thumbs").innerHTML = [
-  feld("#1F3059","#3A4E7E","#8FA6D6"),
-  feld("#9E3D3D","#A8563A","#C9906E"),
-  feld("#40573F","#5E7A5C","#A8C0A5")
-].map(function(s){ return '<div class="thumb">'+s+'</div>'; }).join("");
 </script>
 <script>
-/* Warteliste: sendet direkt an die Brevo-Adresse, ohne deren Skript.
-   Damit haengt die Anmeldung nicht an sibforms.com-Ressourcen, die
-   Browsererweiterungen haeufig blockieren. */
+/* Warteliste: sendet direkt an die Brevo-Adresse, ohne deren Skript. */
 (function(){
   var f = document.getElementById("wl-form"),
       m = document.getElementById("wl-mail"),
