@@ -154,6 +154,18 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
 .wl-msg{margin-top:16px;padding:13px 16px;border:1px solid;font-size:14.5px;line-height:1.5;display:none}
 .wl-msg.ok{display:block;border-color:#2f6b48;background:#1c3327;color:#bfe6cf}
 .wl-msg.err{display:block;border-color:#8a3a3a;background:#3a1f1f;color:#f3c9c9}
+.wl-done{display:none;margin-top:4px;padding:22px 22px 18px;border:1px solid var(--line-strong);background:var(--bg)}
+.wl-done.on{display:block}
+.wl-done h3{margin:0 0 6px;font-size:20px;line-height:1.25}
+.wl-done .to{margin:0 0 16px;font-size:14.5px;color:var(--ink-faint)}
+.wl-done .to b{color:var(--ink);word-break:break-all}
+.wl-done ol{margin:0 0 18px;padding-left:20px;font-size:15px;line-height:1.6}
+.wl-done ol li{margin-bottom:4px}
+.wl-done .open{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.16em;padding:13px 24px;
+  background:var(--shu);color:#fff;text-decoration:none;margin-bottom:14px}
+.wl-done .open:hover{background:#A91F23}
+.wl-done .hint{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink-faint)}
+.wl-done .hint button{all:unset;cursor:pointer;text-decoration:underline;color:var(--ink)}
 </style>
 </head>
 <body>
@@ -212,8 +224,21 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
       </div>
       <input class="wl-hp" type="text" name="email_address_check" tabindex="-1" autocomplete="off" aria-hidden="true">
       <p class="wl-msg" id="wl-msg" role="status" aria-live="polite"></p>
+      <div class="wl-done" id="wl-done" role="status" aria-live="polite" tabindex="-1">
+        <h3>One last step: confirm your email</h3>
+        <p class="to">We just sent a confirmation email to <b id="wl-to"></b></p>
+        <ol>
+          <li>Open the email from <b>KISSAKI</b> (subject: <i>Confirm your spot</i>).</li>
+          <li>Tap <b>CONFIRM MY EMAIL</b>.</li>
+          <li>Done. You're on the list and get in 24 hours early.</li>
+        </ol>
+        <a class="open" id="wl-open" href="#" target="_blank" rel="noopener" hidden>OPEN MY INBOX</a>
+        <p class="hint">Nothing after 2 minutes? Check your spam or Promotions folder,
+        or <button type="button" id="wl-resend">send it again</button>.
+        Wrong address? <button type="button" id="wl-again">Change it</button></p>
+      </div>
     </form>
-    <p class="consent">You get a confirmation email first. You're only on the list once you click it.
+    <p class="consent">After you hit JOIN, we email you a confirm button. One tap on it puts you on the list.
     Unsubscribe any time via the link in every email. Sent with Brevo, data processing agreement under Art. 28 GDPR.</p>
   </div>
 </section>
@@ -294,9 +319,9 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
         <summary>Impressum · Legal notice</summary>
         <div>
           <p>Angaben gem&auml;&szlig; &sect; 5 DDG</p>
-          <p>Malte Steinhilper<br>Zur Ebene 35<br>75015 Bretten<br>Deutschland</p>
+          <p>Malte Steinhilper<br>Deutschland</p>
           <p>E-Mail: <a href="mailto:steam.kensui@gmail.com">steam.kensui@gmail.com</a></p>
-          <p>Verantwortlich f&uuml;r den Inhalt nach &sect; 18 Abs. 2 MStV: Malte Steinhilper, Anschrift wie oben.</p>
+          <p>Verantwortlich f&uuml;r den Inhalt nach &sect; 18 Abs. 2 MStV: Malte Steinhilper.</p>
           <p>Kleinunternehmer gem&auml;&szlig; &sect; 19 UStG &ndash; es wird keine Umsatzsteuer berechnet.</p>
           <h3>Verbraucherstreitbeilegung</h3>
           <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren
@@ -381,6 +406,49 @@ tick(); setInterval(tick, 1000);
   var URL_ = "https://4b5f3c41.sibforms.com/serve/MUIFAI2vOGC_8QycgJ5pXVzuE4n4Fxj1Fot_Rlda3YCRaO8QEtRPqJJSDbe-Yb4WNLe-ZKr6bzKK6o_Fbq06uZeAlZeQvQW_IOv8TiG35ANOQFcpzAHwLi7rMliwwsHueBeFjqha5lAZS0V7MacX7WqZ1J9d8DY0iGZcgbxTEBaRIXEURuxghZ5ilmzxRSWDc-OESJReIL-szNaOxQ==";
   function say(text, ok){ o.textContent = text; o.className = "wl-msg " + (ok ? "ok" : "err"); }
 
+  /* Klare Schritte nach dem Eintragen + direkter Link ins Postfach */
+  var done = document.getElementById("wl-done"),
+      openBtn = document.getElementById("wl-open");
+  var INBOX = {
+    "gmail.com":"https://mail.google.com/mail/u/0/#search/from%3Akissaki.studio",
+    "googlemail.com":"https://mail.google.com/mail/u/0/#search/from%3Akissaki.studio",
+    "outlook.com":"https://outlook.live.com/mail/0/", "hotmail.com":"https://outlook.live.com/mail/0/",
+    "hotmail.de":"https://outlook.live.com/mail/0/", "live.com":"https://outlook.live.com/mail/0/",
+    "live.de":"https://outlook.live.com/mail/0/", "msn.com":"https://outlook.live.com/mail/0/",
+    "icloud.com":"https://www.icloud.com/mail", "me.com":"https://www.icloud.com/mail", "mac.com":"https://www.icloud.com/mail",
+    "yahoo.com":"https://mail.yahoo.com/", "yahoo.de":"https://mail.yahoo.com/",
+    "gmx.de":"https://www.gmx.net/", "gmx.net":"https://www.gmx.net/", "gmx.com":"https://www.gmx.com/",
+    "web.de":"https://web.de/", "t-online.de":"https://email.t-online.de/", "proton.me":"https://mail.proton.me/",
+    "protonmail.com":"https://mail.proton.me/"
+  };
+  function showDone(addr){
+    document.getElementById("wl-to").textContent = addr;
+    var url = INBOX[addr.split("@")[1].toLowerCase()];
+    if (url) { openBtn.href = url; openBtn.hidden = false; } else { openBtn.hidden = true; }
+    o.className = "wl-msg"; o.textContent = "";
+    f.querySelector(".wl-row").style.display = "none";
+    f.querySelector("label").style.display = "none";
+    done.className = "wl-done on"; done.focus();
+  }
+  var lastAddr = "", rs = document.getElementById("wl-resend");
+  rs.addEventListener("click", function(){
+    if (!lastAddr || rs.dataset.busy) return;
+    rs.dataset.busy = "1"; rs.textContent = "sending…";
+    var d = new URLSearchParams();
+    d.append("EMAIL", lastAddr); d.append("email_address_check", ""); d.append("locale", "en");
+    fetch(URL_, { method:"POST", body:d, headers:{"Content-Type":"application/x-www-form-urlencoded"} })
+      .then(function(){ rs.textContent = "sent again ✓"; })
+      .catch(function(){ rs.textContent = "couldn't send, try again"; delete rs.dataset.busy; });
+    setTimeout(function(){ delete rs.dataset.busy; rs.textContent = "send it again"; }, 60000);
+  });
+  document.getElementById("wl-again").addEventListener("click", function(){
+    done.className = "wl-done";
+    f.querySelector(".wl-row").style.display = "";
+    f.querySelector("label").style.display = "";
+    b.disabled = false; b.textContent = "JOIN";
+    m.value = ""; m.focus();
+  });
+
   f.addEventListener("submit", function(e){
     e.preventDefault();
     var v = m.value.trim();
@@ -396,14 +464,13 @@ tick(); setInterval(tick, 1000);
     d.append("email_address_check", "");
     d.append("locale", "en");
 
+    lastAddr = v;
     fetch(URL_, { method:"POST", body:d,
         headers:{"Content-Type":"application/x-www-form-urlencoded"} })
       .then(function(r){ return r.json().catch(function(){ return {success:r.ok}; }); })
       .then(function(j){
         if (j && j.success) {
-          say("Almost there — check your inbox and confirm your email to join the list.", true);
-          f.querySelector(".wl-row").style.display = "none";
-          f.querySelector("label").style.display = "none";
+          showDone(v);
         } else {
           say("Something went wrong and your sign-up wasn't saved. Please try again.", false);
           b.disabled = false; b.textContent = "JOIN";
