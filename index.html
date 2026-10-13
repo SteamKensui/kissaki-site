@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KISSAKI 切先 — Drop 01, 4 December 2026</title>
-<meta name="description" content="KISSAKI 切先 — Edo-period kimono stencils and a sword from 1622, printed on heavy cotton in the EU. Drop 01 opens Friday 4 December 2026, 20:00 CET.">
+<title>KISSAKI 切先 — Training wear for your training arc · Drop 01</title>
+<meta name="description" content="KISSAKI 切先 — training wear for people living their training arc. Kanji, a blade, made to order in Germany. Drop 01: Friday 4 December 2026, 20:00 CET.">
 
 <!-- Pinterest-Domainverifizierung -->
 <meta name="p:domain_verify" content="d2f974373b2acfe42dd3239bcb77e000"/>
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="KISSAKI 切先 — Drop 01">
-<meta property="og:description" content="Katagami & Katana. Friday 4 December 2026, 20:00 CET. Launch prices for 72 hours.">
+<meta property="og:description" content="Training wear for your training arc. Friday 4 December 2026, 20:00 CET. 10% off for 72 hours.">
 <meta property="og:url" content="https://kissaki.studio/">
 <meta property="og:image" content="https://kissaki.studio/art/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -105,6 +105,18 @@ section{padding:76px 0}
 .line-h h3{font-size:22px}
 .line-h span{font-size:13px;color:var(--ink-soft)}
 .spacer{height:56px}
+.g3{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){.g3{grid-template-columns:repeat(2,1fr)}}
+.line-p{color:var(--ink-soft);max-width:60ch;margin:-4px 0 20px}
+.follow{display:inline-block;margin:18px 0 0 18px;font-size:13px;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--line-strong)}
+.follow:hover{color:var(--ink)}
+@media (max-width:560px){.follow{display:block;margin:16px 0 0;width:max-content}}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+@media (max-width:860px){.facts{grid-template-columns:repeat(2,1fr)}}
+.facts div{background:var(--paper);padding:18px 18px;font-size:13.5px;color:var(--ink-soft)}
+.facts b{display:block;color:var(--ink);font-size:14.5px;margin-bottom:2px}
+.stay{margin:0 0 22px;font-size:15px;color:var(--ink-soft)}
+.stay b{color:var(--ink)}
 
 /* Bleibt */
 .stays{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
@@ -182,21 +194,21 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
   <div class="inner">
     <div>
       <div class="jp">切先</div>
-      <h1>The point of the blade.</h1>
-      <p class="lede">Kimono stencils cut by hand in Edo-period Japan. A sword forged in 1622.
-      Printed large on heavy cotton, made to order in Germany.</p>
-      <a class="cta" href="#waitlist">Get in 24 hours early</a>
+      <h1>Built for your training arc.</h1>
+      <p class="lede">Training wear from a rings gymnast. Kanji for the mind you train,
+      a blade for the edge. Made to order in Germany.</p>
+      <a class="cta" href="#waitlist">Get in 24 hours early</a><a class="follow" href="https://www.instagram.com/steam.kensui/" target="_blank" rel="noopener">Follow the arc · @steam.kensui</a>
     </div>
-    <img class="hero-art" src="art/drop01/000.jpg" alt="TSURU TO NAMI 鶴と波 — cranes over the waves, a red sun behind them" width="720" height="900">
+    <img class="hero-art" src="art/drop01/TR1.webp" alt="KISSAKI 切先 Training Tee, back: a katana through the kanji 切先 in red" width="720" height="900">
   </div>
 </div>
 
 <div class="drop">
   <div class="drop-in">
     <div class="drop-txt">
-      <span class="eyebrow">Drop 01 — Katagami &amp; Katana</span>
+      <span class="eyebrow">Drop 01 — Training · Katana · Rest Day</span>
       <strong>Friday 4 December 2026, 20:00 CET</strong>
-      <span class="sub">Launch prices for 72 hours, until Monday 7 December, 20:00 CET.</span>
+      <span class="sub">10% off for 72 hours, until Monday 7 December, 20:00 CET.</span>
     </div>
     <div class="clock" aria-label="Countdown to Drop 01">
       <div><b id="d">–</b><span>Days</span></div>
@@ -212,10 +224,9 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
     <div class="sec-h">
       <span class="eyebrow">Waitlist</span>
       <h2>A day before everyone else.</h2>
-      <p>The list gets in on Thursday 3 December at 20:00 CET. Everyone else on Friday.
-      For all 72 hours, every piece is 10% off. No code, the prices are already reduced.</p>
+      <p>You get in Thursday 3 December, 20:00 CET. Everyone else waits until Friday.</p>
     </div>
-    <div class="perks"><span>24 hours early</span><span>10% launch price</span><span>Three short emails, nothing else</span></div>
+    <div class="perks"><span>24 hours early</span><span>10% off, no code</span><span>3 emails, nothing else</span></div>
     <form class="wl" id="wl-form" novalidate>
       <label for="wl-mail">Email address</label>
       <div class="wl-row">
@@ -238,72 +249,62 @@ footer{border-top:1px solid var(--line);padding:28px 0;font-size:12px;color:var(
         Wrong address? <button type="button" id="wl-again">Change it</button></p>
       </div>
     </form>
-    <p class="consent">After you hit JOIN, we email you a confirm button. One tap on it puts you on the list.
-    Unsubscribe any time via the link in every email. Sent with Brevo, data processing agreement under Art. 28 GDPR.</p>
+    <p class="consent">One tap in the confirmation email and you're on the list. Unsubscribe any time.
+    Sent via Brevo · <a href="#datenschutz">Privacy</a></p>
   </div>
 </section>
 
 <section id="collection">
   <div class="wrap">
     <div class="sec-h">
-      <span class="eyebrow">Drop 01 · Eleven pieces</span>
-      <h2>Two lines. Both real.</h2>
-      <p>No random characters, no invented history. Every motif comes from an object you can
-      look up in the Metropolitan Museum of Art, and every word is a real term from the Japanese
-      martial arts, with its meaning.</p>
+      <span class="eyebrow">Drop 01</span>
+      <h2>Train in it. Rest in it.</h2>
+      <p>Every word is a real term from the Japanese martial arts. No characters, no fan art.</p>
     </div>
 
-    <div class="line-h"><h3>Katagami <span class="red" style="font-family:var(--serif)">型紙</span></h3><span>Four hoodies · black · €59.90</span></div>
-    <p style="color:var(--ink-soft);max-width:62ch;margin:-4px 0 20px">Katagami are paper stencils that dyers in Edo-period Japan cut by hand to print kimono cloth. Made for fabric, so they sit on fabric: large on the back, one small grey character on the chest.</p>
-    <div class="grid g4">
-      <div class="piece"><img src="art/drop01/000.jpg" alt="TSURU TO NAMI" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 000</div><h3>TSURU TO NAMI<em>鶴と波</em></h3><p>A 200-year-old kimono stencil. Now on your back.</p></div></div>
-      <div class="piece"><img src="art/drop01/001.jpg" alt="TSURU" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 001</div><h3>TSURU<em>鶴は千年</em></h3><p>Seven cranes. One blade. Two centuries.</p></div></div>
-      <div class="piece"><img src="art/drop01/003.jpg" alt="UME" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 003</div><h3>UME<em>梅一輪</em></h3><p>The first bloom in the cold.</p></div></div>
-      <div class="piece"><img src="art/drop01/004.jpg" alt="NAMI" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 004</div><h3>NAMI<em>波</em></h3><p>The sea does not ask permission.</p></div></div>
+    <div class="line-h"><h3>Training <span class="red" style="font-family:var(--serif)">修行</span></h3><span>3 tees · close fit · €24.99</span></div>
+    <p class="line-p">Light cotton-poly blend, close cut, print on the back only. Made to move in.</p>
+    <div class="grid g3">
+      <div class="piece"><img src="art/drop01/TR1.webp" alt="KISSAKI Training Tee" loading="lazy" width="720" height="900"><div class="cap"><h3>KISSAKI<em>切先</em></h3><p>The point of the blade.</p></div></div>
+      <div class="piece"><img src="art/drop01/TR2.webp" alt="MUSHIN Training Tee" loading="lazy" width="720" height="900"><div class="cap"><h3>MUSHIN<em>無心</em></h3><p>Empty mind. Full speed.</p></div></div>
+      <div class="piece"><img src="art/drop01/TR3.webp" alt="ZANSHIN Training Tee" loading="lazy" width="720" height="900"><div class="cap"><h3>ZANSHIN<em>残心</em></h3><p>Stay sharp after the last rep.</p></div></div>
     </div>
 
     <div class="spacer"></div>
 
-    <div class="line-h"><h3>Katana <span class="red" style="font-family:var(--serif)">刀</span></h3><span>Seven tees · black · from €17.49</span></div>
-    <p style="color:var(--ink-soft);max-width:62ch;margin:-4px 0 20px">A real sword, dated 1622, driven through two characters. The blade enters the upper one and leaves below the lower one.</p>
+    <div class="line-h"><h3>Katana <span class="red" style="font-family:var(--serif)">刀</span></h3><span>7 tees · black · €24.99 · 2 also oversized</span></div>
+    <p class="line-p">A real sword from 1622, driven through two characters.</p>
     <div class="grid g7">
       <div class="piece"><img src="art/drop01/T01.jpg" alt="KISSAKI red" loading="lazy" width="720" height="900"><div class="cap"><h3>KISSAKI<em>切先</em></h3><p>The point of the blade. Red.</p></div></div>
       <div class="piece"><img src="art/drop01/T02.jpg" alt="KISSAKI white" loading="lazy" width="720" height="900"><div class="cap"><h3>KISSAKI<em>切先</em></h3><p>The point of the blade. White.</p></div></div>
-      <div class="piece"><img src="art/drop01/T03.jpg" alt="ISSEN" loading="lazy" width="720" height="900"><div class="cap"><h3>ISSEN<em>一閃</em></h3><p>A single flash. One cut, no second chance.</p></div></div>
-      <div class="piece"><img src="art/drop01/T04.jpg" alt="KAKUGO" loading="lazy" width="720" height="900"><div class="cap"><h3>KAKUGO<em>覚悟</em></h3><p>Resolve. Decide before you draw.</p></div></div>
+      <div class="piece"><img src="art/drop01/T03.jpg" alt="ISSEN" loading="lazy" width="720" height="900"><div class="cap"><h3>ISSEN<em>一閃</em></h3><p>One cut. No second chance.</p></div></div>
+      <div class="piece"><img src="art/drop01/T04.jpg" alt="KAKUGO" loading="lazy" width="720" height="900"><div class="cap"><h3>KAKUGO<em>覚悟</em></h3><p>Resolve. Decide before you start.</p></div></div>
       <div class="piece"><img src="art/drop01/T05.jpg" alt="MUSHIN" loading="lazy" width="720" height="900"><div class="cap"><h3>MUSHIN<em>無心</em></h3><p>Empty mind. Full speed.</p></div></div>
-      <div class="piece"><img src="art/drop01/T06.jpg" alt="ZANSHIN" loading="lazy" width="720" height="900"><div class="cap"><h3>ZANSHIN<em>残心</em></h3><p>The mind that remains after the strike.</p></div></div>
+      <div class="piece"><img src="art/drop01/T06.jpg" alt="ZANSHIN" loading="lazy" width="720" height="900"><div class="cap"><h3>ZANSHIN<em>残心</em></h3><p>Awareness after the strike.</p></div></div>
       <div class="piece"><img src="art/drop01/T07.jpg" alt="BUSHI" loading="lazy" width="720" height="900"><div class="cap"><h3>BUSHI<em>武士</em></h3><p>Warrior. Carry the blade.</p></div></div>
     </div>
-  </div>
-</section>
 
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="stays">
-      <div>
-        <span class="eyebrow">After the drop</span>
-        <h2 style="font-size:clamp(26px,3.2vw,34px);margin-top:10px">The pieces stay. The launch price doesn't.</h2>
-        <p>Nothing is made before someone orders it, so nothing has to disappear. Every piece of
-        Drop 01 stays in the shop after Monday. What ends is the launch price.</p>
-      </div>
-      <table class="when">
-        <tr><th></th><th>Launch window</th><th>After 7 Dec</th></tr>
-        <tr><td>Waitlist</td><td>Thu 3 Dec, 20:00 · −10%</td><td>regular price</td></tr>
-        <tr><td>Everyone</td><td>Fri 4 Dec, 20:00 · −10%</td><td>regular price</td></tr>
-        <tr><td>Pieces</td><td>all eleven</td><td>all eleven</td></tr>
-      </table>
+    <div class="spacer"></div>
+
+    <div class="line-h"><h3>Rest Day <span class="red" style="font-family:var(--serif)">型紙</span></h3><span>4 hoodies · black · from €49.99</span></div>
+    <p class="line-p">Edo-period kimono stencils, large on the back. For the days between sessions.</p>
+    <div class="grid g4">
+      <div class="piece"><img src="art/drop01/000.jpg" alt="TSURU TO NAMI" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 000</div><h3>TSURU TO NAMI<em>鶴と波</em></h3><p>Cranes over the waves.</p></div></div>
+      <div class="piece"><img src="art/drop01/001.jpg" alt="TSURU" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 001</div><h3>TSURU<em>鶴は千年</em></h3><p>Seven cranes. One blade.</p></div></div>
+      <div class="piece"><img src="art/drop01/003.jpg" alt="UME" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 003</div><h3>UME<em>梅一輪</em></h3><p>The first bloom in the cold.</p></div></div>
+      <div class="piece"><img src="art/drop01/004.jpg" alt="NAMI" loading="lazy" width="720" height="900"><div class="cap"><div class="no">NO. 004</div><h3>NAMI<em>波</em></h3><p>The sea does not ask permission.</p></div></div>
     </div>
   </div>
 </section>
 
 <section style="padding-top:0">
   <div class="wrap">
-    <div class="trust">
-      <div><h3>Printed in Germany</h3><p>Every piece is printed to order by Textildruck Europa and ships from inside the EU.</p></div>
-      <div><h3>14-day right of withdrawal</h3><p>The statutory EU right of withdrawal applies to every order.</p></div>
-      <div><h3>Made to order</h3><p>Production takes up to 10 working days, then shipping with tracking.</p></div>
-      <div><h3>No tracking</h3><p>This page loads nothing from outside: no analytics, no ad pixels, no external fonts or scripts.</p></div>
+    <p class="stay"><b>The pieces stay after the drop.</b> Only the launch price ends, Monday 7 December, 20:00 CET.</p>
+    <div class="facts">
+      <div><b>Printed in Germany</b>Made to order, ships from the EU</div>
+      <div><b>Up to 10 working days</b>Production, then tracked shipping</div>
+      <div><b>14 days</b>EU right of withdrawal</div>
+      <div><b>No tracking</b>No cookies, pixels or analytics here</div>
     </div>
   </div>
 </section>
