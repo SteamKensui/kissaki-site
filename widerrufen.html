@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vertrag widerrufen · Withdraw from contract — KISSAKI 切先</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#121214">
+<style>
+:root{--bg:#121214;--paper:#18181B;--ink:#F0ECE4;--ink-soft:#B3ADA3;--ink-faint:#8C867D;--line:rgba(240,236,228,.12);--line-strong:rgba(240,236,228,.32);--shu:#C8262B;--sans:"Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;--serif:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"Noto Serif CJK JP",Georgia,serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}:focus-visible{outline:2px solid var(--shu);outline-offset:3px}
+.wrap{max-width:640px;margin:0 auto;padding:0 22px}
+header{border-bottom:1px solid var(--line)}.head{display:flex;align-items:center;gap:12px;padding:16px 0}
+.seal{background:var(--shu);color:#fff;font-family:var(--serif);font-size:13px;line-height:1;padding:6px 5px;writing-mode:vertical-rl}
+.wordmark{font-weight:700;letter-spacing:.32em;font-size:15px;text-decoration:none}
+main{padding:36px 0 56px}h1{font-size:28px;line-height:1.2;margin:0 0 8px}
+p{color:var(--ink-soft);margin:8px 0}.small{font-size:13.5px;color:var(--ink-faint)}
+.big{display:block;width:100%;margin:22px 0 6px;padding:18px 20px;border:0;background:var(--shu);color:#fff;font-family:var(--sans);font-size:17px;font-weight:700;letter-spacing:.04em;cursor:pointer;text-align:center}
+.big:hover{background:#A91F23}.big[disabled]{opacity:.55;cursor:default}
+form{display:none;margin-top:18px;padding:20px;border:1px solid var(--line-strong);background:var(--paper)}
+form.on{display:block}
+label{display:block;font-size:14px;font-weight:700;margin:16px 0 6px;color:var(--ink)}
+label .opt{font-weight:400;color:var(--ink-faint)}
+input,textarea{width:100%;font-family:var(--sans);font-size:16px;color:var(--ink);background:var(--bg);border:1px solid var(--line-strong);border-radius:0;padding:12px 13px}
+textarea{min-height:84px;resize:vertical}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.msg{display:none;margin-top:16px;padding:13px 16px;border:1px solid #8a3a3a;background:#3a1f1f;color:#f3c9c9;font-size:15px}
+.msg.on{display:block}
+.done{display:none;margin-top:20px;padding:22px;border:1px solid #2f6b48;background:#1c3327;color:#d6f0e0}
+.done.on{display:block}.done h2{margin:0 0 10px;font-size:20px;color:#fff}
+.done dl{margin:12px 0 0;display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;font-size:15px}
+.done dt{color:#a9d8bc}.done dd{margin:0;color:#fff;word-break:break-word}
+footer{border-top:1px solid var(--line);padding:24px 0;font-size:13px;color:var(--ink-faint)}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+</style>
+</head>
+<body>
+<header><div class="wrap head"><span class="seal">切先</span><a class="wordmark" href="https://kissaki.studio/">KISSAKI</a></div></header>
+<main class="wrap">
+<h1>Vertrag widerrufen</h1>
+<p lang="en">Withdraw from your contract (purchase in the KISSAKI shop).</p>
+<p class="small">Hier können Sie Ihren Kauf im KISSAKI Shop innerhalb der Widerrufsfrist online widerrufen. Gründe müssen Sie nicht angeben. Details: <a href="/widerruf.html">Widerrufsbelehrung</a>.</p>
+
+<button type="button" class="big" id="open">Vertrag hier widerrufen · Withdraw from contract here</button>
+
+<form id="f" novalidate aria-labelledby="open">
+  <label for="name">Ihr Name · Your name</label>
+  <input id="name" name="name" autocomplete="name" required>
+
+  <label for="order">Bestellnummer · Order number</label>
+  <input id="order" name="order" required>
+
+  <label for="items">Welche Artikel? <span class="opt">(optional, leer = gesamte Bestellung · empty = whole order)</span></label>
+  <textarea id="items" name="items"></textarea>
+
+  <label for="odate">Bestellt am <span class="opt">(optional)</span></label>
+  <input id="odate" name="odate">
+
+  <label for="mail">E-Mail für die Eingangsbestätigung · Email for the confirmation</label>
+  <input id="mail" name="mail" type="email" autocomplete="email" required>
+
+  <input class="hp" type="text" name="email_address_check" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+  <button type="submit" class="big" id="confirm">Widerruf bestätigen · Confirm withdrawal</button>
+  <p class="small">Mit diesem Klick erklären Sie den Widerruf. Sie erhalten sofort eine Eingangsbestätigung per E-Mail mit Inhalt, Datum und Uhrzeit.</p>
+  <p class="msg" id="msg" role="alert"></p>
+</form>
+
+<div class="done" id="done" role="status" tabindex="-1">
+  <h2>Widerruf eingegangen · Withdrawal received</h2>
+  <p style="color:#d6f0e0">Eine Eingangsbestätigung ist per E-Mail an Sie unterwegs. Bitte speichern Sie diese Seite oder machen Sie einen Screenshot.</p>
+  <dl>
+    <dt>Eingang</dt><dd id="r-time"></dd>
+    <dt>Name</dt><dd id="r-name"></dd>
+    <dt>Bestellung</dt><dd id="r-order"></dd>
+    <dt>Artikel</dt><dd id="r-items"></dd>
+    <dt>Bestellt am</dt><dd id="r-odate"></dd>
+    <dt>E-Mail</dt><dd id="r-mail"></dd>
+  </dl>
+</div>
+
+<p class="small" style="margin-top:28px">Datenschutz: Ihre Angaben werden nur zur Bearbeitung des Widerrufs verarbeitet und dafür über Brevo (Sendinblue GmbH, Berlin) übermittelt, damit die Eingangsbestätigung automatisch versendet wird. Details unter <a href="/#datenschutz">Datenschutz</a>.</p>
+</main>
+<footer><div class="wrap"><nav><a href="/impressum.html">Impressum</a><a href="/widerruf.html">Widerrufsbelehrung</a><a href="/widerrufen.html">Vertrag widerrufen</a><a href="/#datenschutz">Datenschutz</a><a href="https://shop.kissaki.studio/">Shop</a></nav></div></footer>
+
+<script>
+(function(){
+  /* Brevo-Formular "Widerrufe" (Einfache Bestätigung, Liste "Widerrufe"). */
+  var URL_ = "__BREVO_WIDERRUF_FORM_URL__";
+  var MAIL = "steam.kensui@gmail.com";
+  var f = document.getElementById("f"), open = document.getElementById("open"),
+      btn = document.getElementById("confirm"), msg = document.getElementById("msg"),
+      done = document.getElementById("done");
+
+  open.addEventListener("click", function(){
+    f.className = "on"; open.style.display = "none"; document.getElementById("name").focus();
+  });
+  if (location.hash === "#form") { open.click(); }
+
+  function berlinNow(){
+    var d = new Date();
+    var s = d.toLocaleString("de-DE", {timeZone:"Europe/Berlin", year:"numeric", month:"2-digit", day:"2-digit", hour:"2-digit", minute:"2-digit", second:"2-digit"});
+    return s + " Uhr (Europe/Berlin)";
+  }
+  function err(t){ msg.textContent = t; msg.className = "msg on"; }
+  function fallback(v){
+    var body = "Hiermit widerrufe ich den Vertrag über folgende Bestellung.\n\nName: " + v.name +
+      "\nBestellnummer: " + v.order + "\nArtikel: " + (v.items || "gesamte Bestellung") +
+      "\nBestellt am: " + (v.odate || "-") + "\nZeit: " + v.time;
+    return "mailto:" + MAIL + "?subject=" + encodeURIComponent("Widerruf Bestellung " + v.order) + "&body=" + encodeURIComponent(body);
+  }
+
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    msg.className = "msg";
+    if (f.elements["email_address_check"].value) return;
+    var v = {
+      name: f.elements.name.value.trim(), order: f.elements.order.value.trim(),
+      items: f.elements.items.value.trim(), odate: f.elements.odate.value.trim(),
+      mail: f.elements.mail.value.trim(), time: berlinNow()
+    };
+    if (!v.name || !v.order) { err("Bitte Name und Bestellnummer angeben. · Please enter your name and order number."); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.mail)) { err("Bitte eine gültige E-Mail-Adresse angeben. · Please enter a valid email."); return; }
+
+    btn.disabled = true; btn.textContent = "Wird gesendet …";
+    var d = new URLSearchParams();
+    d.append("EMAIL", v.mail);
+    d.append("WIDERRUF_NAME", v.name);
+    d.append("WIDERRUF_BESTELLUNG", "Bestellnummer: " + v.order + " · Artikel: " + (v.items || "gesamte Bestellung") + " · Bestellt am: " + (v.odate || "-"));
+    d.append("WIDERRUF_ZEIT", v.time);
+    d.append("email_address_check", "");
+    d.append("locale", "de");
+
+    fetch(URL_, { method:"POST", body:d, headers:{"Content-Type":"application/x-www-form-urlencoded"} })
+      .then(function(r){ return r.json().catch(function(){ return {success:r.ok}; }); })
+      .then(function(j){
+        if (!(j && j.success)) throw new Error("brevo");
+        document.getElementById("r-time").textContent = v.time;
+        document.getElementById("r-name").textContent = v.name;
+        document.getElementById("r-order").textContent = v.order;
+        document.getElementById("r-items").textContent = v.items || "gesamte Bestellung";
+        document.getElementById("r-odate").textContent = v.odate || "–";
+        document.getElementById("r-mail").textContent = v.mail;
+        f.className = ""; done.className = "done on"; done.focus();
+      })
+      .catch(function(){
+        btn.disabled = false; btn.textContent = "Widerruf bestätigen · Confirm withdrawal";
+        msg.innerHTML = "";
+        msg.appendChild(document.createTextNode("Der Widerruf konnte gerade nicht übermittelt werden. Bitte senden Sie ihn per E-Mail – der Text ist vorbereitet: "));
+        var a = document.createElement("a"); a.href = fallback(v); a.textContent = "Widerruf per E-Mail senden";
+        msg.appendChild(a); msg.className = "msg on";
+      });
+  });
+})();
+</script>
+</body>
+</html>
